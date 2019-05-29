@@ -36,9 +36,6 @@ def get_torchbiggraph_config():
 
     # Evaluation during training
     eval_fraction = 0,
-
-    # Dynamic relations
-    dynamic_relations = True,
   )
 
   return config
