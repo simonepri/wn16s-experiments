@@ -17,7 +17,7 @@ FILENAMES = {
   'train': 'edge2id_all.tsv',
   'test': 'edge2id_all.tsv',
 }
-DEFAULT_CONFIG = pkg_resources.resource_filename('configs/wn16s_config.py')
+DEFAULT_CONFIG = pkg_resources.resource_filename('configs', 'configs/wn16s_config.py')
 
 def convert_path(fname):
   basename, _ = os.path.splitext(fname)
