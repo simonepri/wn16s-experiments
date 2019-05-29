@@ -20,7 +20,7 @@ FILENAMES = {
 DEFAULT_CONFIG = pkg_resources.resource_filename('configs', 'configs/wn16s_config.py')
 
 
-from torchbiggraph.model import {AbstractOperator, AbstractComparator}
+from torchbiggraph.model import (AbstractOperator, AbstractComparator)
 
 class CustomOperator(AbstractOperator):
   def __init__(self, dim: int):
