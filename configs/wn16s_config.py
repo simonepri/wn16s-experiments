@@ -4,7 +4,7 @@ def get_torchbiggraph_config():
     entity_path = 'data/wn16s',
     edge_paths = [],
     checkpoint_path = 'model/wn16s',
-    init_path = null,
+    init_path = None,
 
     # Graph structure
     entities = {
@@ -20,7 +20,7 @@ def get_torchbiggraph_config():
 
     # Scoring model
     dimension = 128,
-    max_norm = null,
+    max_norm = None,
     global_emb = False,
     comparator = 'dot',
     bias = False,
