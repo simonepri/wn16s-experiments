@@ -36,11 +36,6 @@ def main():
                       help='Run unfiltered eval')
   args = parser.parse_args()
 
-  if args.param is not None:
-      overrides = chain.from_iterable(args.param)  # flatten
-  else:
-      overrides = None
-
   data_dir = args.data_dir
   fpath = utils.download_url(WN16S_URL, DATA_DIR)
   utils.extract_tar(fpath)
@@ -54,6 +49,7 @@ def main():
     rel_col = 1,
   )
 
+  overrides = chain.from_iterable(args.param) if args.param is not None else None
   config = parse_config(args.config, overrides)
 
   train_path = [convert_path(os.path.join(DATA_DIR, FILENAMES['train']))]
