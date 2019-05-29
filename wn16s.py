@@ -20,6 +20,7 @@ FILENAMES = {
 DEFAULT_CONFIG = pkg_resources.resource_filename('configs', 'configs/wn16s_config.py')
 
 
+import torch.nn as nn
 from torchbiggraph.model import (AbstractOperator, AbstractComparator)
 
 class CustomOperator(AbstractOperator):
@@ -27,24 +28,15 @@ class CustomOperator(AbstractOperator):
     super().__init__(dim)
     self.translation = nn.Parameter(torch.zeros((self.dim,)))
 
-  def forward(self, embeddings: FloatTensorType) -> FloatTensorType:
+  def forward(self, embeddings):
     match_shape(embeddings, ..., self.dim)
     return embeddings + self.translation
 
 class CustomComparator(AbstractComparator):
-  def prepare(
-    self,
-    embs: FloatTensorType,
-  ) -> FloatTensorType:
+  def prepare(self, embs):
     return embs
 
-  def forward(
-    self,
-    lhs_pos: FloatTensorType,
-    rhs_pos: FloatTensorType,
-    lhs_neg: FloatTensorType,
-    rhs_neg: FloatTensorType,
-  ) -> Tuple[FloatTensorType, FloatTensorType, FloatTensorType]:
+  def forward(self, lhs_pos, rhs_pos, lhs_neg, rhs_neg):
     num_chunks, num_pos_per_chunk, dim = match_shape(lhs_pos, -1, -1, -1)
     match_shape(rhs_pos, num_chunks, num_pos_per_chunk, dim)
     match_shape(lhs_neg, num_chunks, -1, dim)
