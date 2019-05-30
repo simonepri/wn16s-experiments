@@ -16,9 +16,6 @@ def get_torchbiggraph_config():
       'rhs': 'all',
       'operators': [{
         'type': 'linear',
-        'side': 'both',
-      }, {
-        'type': 'translation',
         'side': 'left',
       }]
     }],
