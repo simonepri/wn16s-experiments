@@ -18,7 +18,7 @@ def get_torchbiggraph_config():
         'type': 'linear',
         'side': 'both',
       }, {
-        'name': 'translation',
+        'type': 'translation',
         'side': 'left',
       }]
     }],
