@@ -22,7 +22,7 @@ def get_torchbiggraph_config():
     dimension = 128,
     max_norm = None,
     global_emb = False,
-    comparator = 'dot',
+    comparator = 'cos',
     bias = False,
 
     # Training
