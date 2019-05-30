@@ -14,7 +14,8 @@ def get_torchbiggraph_config():
       'name': 'all_edges',
       'lhs': 'all',
       'rhs': 'all',
-      'operator': 'projection_translation',
+      'operator_lhs': 'projection_translation',
+      'operator_rhs': 'projection',
     }],
     dynamic_relations = True,
 
