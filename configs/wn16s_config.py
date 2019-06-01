@@ -1,3 +1,22 @@
+ID_TO_REL = [
+  'hypernyms', 'instance_hypernyms',
+  'hyponyms', 'instance_hyponyms',
+  'member_holonyms', 'substance_holonyms', 'part_holonyms',
+  'member_meronyms', 'substance_meronyms', 'part_meronyms',
+  'attributes',
+  'entailments',
+  'causes',
+  'also_sees',
+  'verb_groups',
+  'similar_tos'
+]
+
+relations = [{
+  'name': rel_name, 'lhs': 'all', 'rhs': 'all',
+  'sym_operator': 'projection',
+  'operator': 'projtrans',
+} for rel_name in ID_TO_REL]
+
 def get_torchbiggraph_config():
   config = dict(
     # I/O data
@@ -10,103 +29,7 @@ def get_torchbiggraph_config():
     entities = {
       'all': {'num_partitions': 1},
     },
-    relations = [{
-      'name': '0',
-      'lhs': 'all',
-      'rhs': 'all',
-      'sym_operator': 'projection',
-      'operator': 'projtrans',
-    },{
-      'name': '1',
-      'lhs': 'all',
-      'rhs': 'all',
-      'sym_operator': 'projection',
-      'operator': 'projtrans',
-    },{
-      'name': '2',
-      'lhs': 'all',
-      'rhs': 'all',
-      'sym_operator': 'projection',
-      'operator': 'projtrans',
-    },{
-      'name': '3',
-      'lhs': 'all',
-      'rhs': 'all',
-      'sym_operator': 'projection',
-      'operator': 'projtrans',
-    },{
-      'name': '4',
-      'lhs': 'all',
-      'rhs': 'all',
-      'sym_operator': 'projection',
-      'operator': 'projtrans',
-    },{
-      'name': '5',
-      'lhs': 'all',
-      'rhs': 'all',
-      'sym_operator': 'projection',
-      'operator': 'projtrans',
-    },{
-      'name': '6',
-      'lhs': 'all',
-      'rhs': 'all',
-      'sym_operator': 'projection',
-      'operator': 'projtrans',
-    },{
-      'name': '7',
-      'lhs': 'all',
-      'rhs': 'all',
-      'sym_operator': 'projection',
-      'operator': 'projtrans',
-    },{
-      'name': '8',
-      'lhs': 'all',
-      'rhs': 'all',
-      'sym_operator': 'projection',
-      'operator': 'projtrans',
-    },{
-      'name': '9',
-      'lhs': 'all',
-      'rhs': 'all',
-      'sym_operator': 'projection',
-      'operator': 'projtrans',
-    },{
-      'name': '10',
-      'lhs': 'all',
-      'rhs': 'all',
-      'sym_operator': 'projection',
-      'operator': 'projtrans',
-    },{
-      'name': '11',
-      'lhs': 'all',
-      'rhs': 'all',
-      'sym_operator': 'projection',
-      'operator': 'projtrans',
-    },{
-      'name': '12',
-      'lhs': 'all',
-      'rhs': 'all',
-      'sym_operator': 'projection',
-      'operator': 'projtrans',
-    },{
-      'name': '13',
-      'lhs': 'all',
-      'rhs': 'all',
-      'sym_operator': 'projection',
-      'operator': 'projtrans',
-    },{
-      'name': '14',
-      'lhs': 'all',
-      'rhs': 'all',
-      'sym_operator': 'projection',
-      'operator': 'projtrans',
-    },{
-      'name': '15',
-      'lhs': 'all',
-      'rhs': 'all',
-      'sym_operator': 'projection',
-      'operator': 'projtrans',
-    }],
+    relations = [relations],
 
     # Scoring model
     dimension = 128,
