@@ -13,8 +13,7 @@ ID_TO_REL = [
 
 relations = [{
   'name': rel_name, 'lhs': 'all', 'rhs': 'all',
-  'sym_operator': 'projection',
-  'operator': 'projtrans',
+  'operator': 'translation',
 } for rel_name in ID_TO_REL]
 
 def get_torchbiggraph_config():
