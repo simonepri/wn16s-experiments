@@ -11,13 +11,13 @@ def get_torchbiggraph_config():
       'all': {'num_partitions': 1},
     },
     relations = [{
-      'name': 'all_edges',
+      'name': '0',
       'lhs': 'all',
       'rhs': 'all',
       #'sym_operator': 'linear',
       #'operator': 'translation',
     }],
-    dynamic_relations = True,
+    #dynamic_relations = True,
 
     # Scoring model
     dimension = 128,
