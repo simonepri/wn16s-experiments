@@ -15,8 +15,8 @@ from torchbiggraph.train import train
 DATA_DIR = 'data'
 WN16S_URL = 'https://github.com/simonepri/WN16S/releases/latest/download/WN16S.tgz'
 FILENAMES = {
-  'train': 'edge2id_all.tsv',
-  'test': 'edge2id_all.tsv',
+  'train': 'edges_as_name_all.tsv',
+  'test': 'edges_as_name_all.tsv',
 }
 DEFAULT_CONFIG = pkg_resources.resource_filename('configs', 'configs/wn16s_config.py')
 
