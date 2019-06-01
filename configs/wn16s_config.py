@@ -17,7 +17,7 @@ def get_torchbiggraph_config():
       #'sym_operator': 'linear',
       #'operator': 'translation',
     }],
-    #dynamic_relations = True,
+    dynamic_relations = True,
 
     # Scoring model
     dimension = 128,
