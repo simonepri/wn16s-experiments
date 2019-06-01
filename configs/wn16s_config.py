@@ -27,7 +27,7 @@ def get_torchbiggraph_config():
     bias = False,
 
     # Training
-    num_epochs = 2,
+    num_epochs = 1,
     batch_size = 1000,
     num_batch_negs = 100,
     num_uniform_negs = 0,
