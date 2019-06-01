@@ -63,6 +63,12 @@ def main():
 
   do_eval(eval_config)
 
+  make_tsv(
+    config.checkpoint_path,
+    os.join(config.entity_path, 'dictionary.json')
+    os.join('embeddings', 'joined_embeddings.tsv')
+  )
+
 
 if __name__ == '__main__':
   main()

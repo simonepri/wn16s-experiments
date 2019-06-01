@@ -1,7 +1,7 @@
 def get_torchbiggraph_config():
   config = dict(
     # I/O data
-    entity_path = 'data/wn16s',
+    entity_path = 'model/wn16s',
     edge_paths = [],
     checkpoint_path = 'model/wn16s',
     init_path = None,
