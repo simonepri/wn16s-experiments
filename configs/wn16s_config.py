@@ -35,7 +35,7 @@ def get_torchbiggraph_config():
     dimension = 128,
     max_norm = None,
     global_emb = False,
-    comparator = 'cos',
+    comparator = 'dot',
     bias = False,
 
     # Training
@@ -43,7 +43,7 @@ def get_torchbiggraph_config():
     batch_size = 1000,
     num_batch_negs = 100,
     num_uniform_negs = 0,
-    loss_fn = 'dot',
+    loss_fn = 'ranking',
     margin = 0.1,
     lr = 0.1,
 
