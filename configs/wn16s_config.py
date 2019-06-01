@@ -15,7 +15,7 @@ def get_torchbiggraph_config():
       'lhs': 'all',
       'rhs': 'all',
       #'sym_operator': 'linear',
-      'operator': 'translation',
+      #'operator': 'translation',
     }],
     dynamic_relations = True,
 
