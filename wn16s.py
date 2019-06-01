@@ -67,7 +67,7 @@ def main():
   make_tsv(
     config.checkpoint_path,
     os.path.join(config.entity_path, 'dictionary.json'),
-    os.path.join('embeddings', 'joined_embeddings.tsv')
+    'joined_embeddings.tsv'
   )
 
 
