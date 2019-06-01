@@ -29,7 +29,7 @@ def get_torchbiggraph_config():
     entities = {
       'all': {'num_partitions': 1},
     },
-    relations = [relations],
+    relations = relations,
 
     # Scoring model
     dimension = 128,
