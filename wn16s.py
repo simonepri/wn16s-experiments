@@ -8,6 +8,7 @@ import pkg_resources
 import torchbiggraph.converters.utils as utils
 from torchbiggraph.config import parse_config
 from torchbiggraph.converters.import_from_tsv import convert_input_data
+from torchbiggraph.converters.export_to_tsv import export_output_data
 from torchbiggraph.eval import do_eval
 from torchbiggraph.train import train
 
@@ -63,7 +64,7 @@ def main():
 
   do_eval(eval_config)
 
-  make_tsv(
+  export_output_data(
     config.checkpoint_path,
     os.join(config.entity_path, 'dictionary.json')
     os.join('embeddings', 'joined_embeddings.tsv')
