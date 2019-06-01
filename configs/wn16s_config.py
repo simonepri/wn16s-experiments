@@ -43,7 +43,7 @@ def get_torchbiggraph_config():
     batch_size = 1000,
     num_batch_negs = 100,
     num_uniform_negs = 0,
-    loss_fn = 'ranking',
+    loss_fn = 'dot',
     margin = 0.1,
     lr = 0.1,
 
