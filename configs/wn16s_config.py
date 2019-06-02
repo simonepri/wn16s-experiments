@@ -33,7 +33,7 @@ def get_torchbiggraph_config():
 
     # Scoring model
     dimension = 128,
-    max_norm = None,
+    max_norm = 1.0,
     global_emb = False,
     comparator = 'l2',
     bias = False,
