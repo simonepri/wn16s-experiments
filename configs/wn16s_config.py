@@ -13,8 +13,8 @@ ID_TO_REL = [
 
 relations = [{
   'name': rel_name, 'lhs': 'all', 'rhs': 'all',
-  'sym_operator': 'projection',
-  'operator': 'projtrans',
+  'sym_operator': 'projection_right',
+  'operator': 'half_translation_right',
 } for rel_name in ID_TO_REL]
 
 def get_torchbiggraph_config():
@@ -39,7 +39,7 @@ def get_torchbiggraph_config():
     bias = False,
 
     # Training
-    num_epochs = 15,
+    num_epochs = 100,
     batch_size = 1000,
     num_batch_negs = 100,
     num_uniform_negs = 0,
