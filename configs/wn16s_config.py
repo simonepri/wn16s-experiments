@@ -41,7 +41,7 @@ def get_torchbiggraph_config():
     # Training
     num_epochs = 15,
     batch_size = 1000,
-    num_batch_negs = 100,
+    num_batch_negs = 150,
     num_uniform_negs = 0,
     loss_fn = 'ranking',
     margin = 0.1,
